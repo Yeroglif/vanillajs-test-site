@@ -1,0 +1,32 @@
+{
+  "name": "vanillajs-patterns ",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "prettier": "latest",
+    "serve": "latest"
+  },
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prettier": "prettier --write \"**/*.{js,json,ts,tsx,css,scss,html}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantuminformation/javascript-frameworks-forbidden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quantuminformation/javascript-frameworks-forbidden/issues"
+  },
+  "homepage": "https://github.com/quantuminformation/javascript-frameworks-forbidden#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.3",
+    "happy-dom": "^15.7.4",
+    "prettier-plugin-embed": "^0.4.4",
+    "vitest": "^2.1.3"
+  }
+}

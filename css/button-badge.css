@@ -1,0 +1,109 @@
+button,
+.button {
+  padding: var(--p-sm) var(--p-md);
+  border: none;
+  border-radius: var(--rounded-full);
+  background-color: var(--primary-color);
+  color: var(--default-text-inv);
+  cursor: pointer;
+  gap: 0.3rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--primary-hover-color);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+    color: var(--default-text);
+    &:hover {
+      background-color: var(--secondary-hover-color);
+    }
+  }
+
+  &.wireframe {
+    background-color: var(--bg-color);
+    color: var(--default-text);
+    border: 1px solid var(--default-text);
+    &:hover {
+      background-color: var(--minor-text);
+    }
+  }
+  &.transparent {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    &:hover {
+      color: var(--primary-color);
+      background-color: white;
+    }
+  }
+
+  &.destructive {
+    background-color: var(--destructive-color);
+    color: var(--default-text);
+    &:hover {
+      background-color: var(--destructive-color-hover);
+    }
+  }
+
+  &.success {
+    background-color: var(--success-color);
+    color: var(--default-text);
+    &:hover {
+      background-color: var(--success-color-hover);
+    }
+  }
+
+  /* Small button styling */
+  &.small-button {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--p-xs) var(--p-sm);
+  font-size: 0.75rem; /* make the text smaller */
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: var(--rounded-full);
+  transition: all 0.2s;
+  cursor: default; /* no hand cursor on hover */
+  color: var(--default-text);
+
+  &.success {
+    background-color: var(--success-color);
+  }
+}
+
+.badge.secondary {
+  background-color: var(--secondary-color);
+  color: var(--default-text);
+}
+
+.badge.wireframe {
+  background-color: var(--bg-color);
+  color: var(--default-text);
+  border: 1px solid var(--default-text);
+}
+.badge.destructive {
+  background-color: var(--destructive-color);
+  color: var(--default-text);
+}
+
+/* common */
+button,
+badge {
+  & svg {
+    width: 1rem;
+  }
+}
