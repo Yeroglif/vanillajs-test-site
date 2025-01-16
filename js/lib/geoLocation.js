@@ -1,6 +1,6 @@
 export async function getGeoLocation(privacy) {
-  let latitude;
-  let longitude;
+  let latitude = 56.1966; // Default latitude (Loch)
+  let longitude = 3.3764; // Default longitude (Loch)
 
   try {
     // Try to get user's current location using the geolocation API

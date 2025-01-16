@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vanilla.js patterns</title>
+    <title>CryptidZone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:," />
     <link
@@ -22,24 +22,24 @@
     <script src="./js/store.js" defer type="module"></script>
     <script src="./js/componentLoader.js" defer type="module"></script>
   </head>
-  <body class="flex flex-col">
-    <div class="flex">
-      <nav data-component="nav"></nav>
-<!--
-      <nav data-component="nav" data-header-bar="true" data-burger-px="600"></nav>
--->
-      <main data-component="router" data-use-hash style="padding: 1rem; width: 100%">
-        <!--components in /pages that will be fetched by router when user clicks on a  -->
-      </main>
-    </div>
-    <footer>
-      <span>Copyright Nikos Katsikanis LTD</span>
-      <div data-component="theme-switcher"></div>
-    </footer>
-    <div class="flex justify-center">
-      <a href="https://github.com/quantuminformation/vanillajs-patterns" target="_blank">
-        Fork me on GitHub
-      </a>
+  <body>
+    <div class="flex flex-col" style="min-height: 100vh;">
+        <!-- <nav data-component="nav"></nav> -->
+        <div class="flex" style="flex: 1;">
+          <nav data-component="nav" data-header-bar="true" data-burger-px="600"></nav>
+          <main data-component="router" data-use-hash style="flex: 1;">
+            <!--components in /pages that will be fetched by router when user clicks on a  -->
+          </main>
+        </div>
+      <footer>
+        <span>Copyright Nikos Katsikanis LTD</span>
+        <div data-component="theme-switcher"></div>
+      </footer>
+      <div class="flex justify-center">
+        <a href="https://github.com/quantuminformation/vanillajs-patterns" target="_blank">
+          Fork me on GitHub
+        </a>
+      </div>
     </div>
   </body>
 </html>

@@ -37,7 +37,8 @@ export default (hostComponent) => {
   const render = () => {
     const { burgerPx, headerBar } = hostComponent.dataset;
 
-    const navStyles = `
+    const navStyles = //css 
+    `
       nav {
         display: flex;
         flex-wrap: wrap;
@@ -45,6 +46,7 @@ export default (hostComponent) => {
         gap: 1rem;
         padding: 10px 20px;
         background-color: var(--nav-background-color);
+        z-index: 100;
 
         a {
           color: var(--default-text);
@@ -130,6 +132,18 @@ export default (hostComponent) => {
       <a href="/" title="Home">
         <span class="icon">&#x1F3E0;</span>
         <span class="text">Home</span>
+      </a>
+      <a href="/explore" title="Explore Wildlife">
+        <span class="icon">&#129409;</span>
+        <span class="text">Explore Wildlife</span>
+      </a>
+      <a href="/submit" title="Submit a Sighting">
+        <span class="icon">&#x270F;</span>
+        <span class="text">Submit a Sighting</span>
+      </a>
+      <a href="/cryptid-map" title="Map">
+        <span class="icon">&#128506;</span>
+        <span class="text">Map</span>
       </a>
       <a href="/button-badge" title="Button + Badges Design System">
         <span class="icon">&#x1F518;</span>
