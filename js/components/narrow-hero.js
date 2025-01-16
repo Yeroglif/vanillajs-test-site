@@ -29,7 +29,6 @@ export default (hostComponent) => {
           max-width: 600px;
           margin: auto;
           padding: 20px; 
-          background: rgba(255, 255, 255, 0.7);
         }
         
         .narrow-hero h1 {
@@ -39,8 +38,9 @@ export default (hostComponent) => {
         }
         
         .narrow-hero p {
-          font-size: 1rem;
+          font-size: 1.6rem;
           color: #555;
+          font-weight: 500;
         }
 
         @media (min-width: 600px){
