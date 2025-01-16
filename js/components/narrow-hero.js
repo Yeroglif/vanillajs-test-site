@@ -1,4 +1,5 @@
 // Updated narrow-hero component to maintain padding and a fixed height
+import { store} from '../store.js';
 
 export default (hostComponent) => {
     const {imageurl='https://picsum.photos/1600/900', header = "Default Header", text = "" } = hostComponent.dataset;
@@ -66,8 +67,34 @@ export default (hostComponent) => {
       </section>
       
     `;
-    hostComponent.style.background = `url('${imageurl}') center/cover no-repeat`;
+    //Check whether the button has been favourited
+    if(store.isCryptidFave(header)){
+      hostComponent.querySelector('.fave-button button').style = "color: var(--primary-color); background-color: white;";
+    }else {
+      hostComponent.querySelector('.fave-button button').style = "color: default; background-color: default;";
+    }
+
+    hostComponent.querySelector(".fave-button button").addEventListener("click", () => {
+      if(store.isCryptidFave(header)){
+        store.setCryptidFave((mySet) => {
+          const updatedSet = new Set(mySet);
+          updatedSet.delete(header);
+          return updatedSet;
+        })
+        hostComponent.querySelector('.fave-button button').style = "color: default; background-color: default;";
+      }else {
+        store.setCryptidFave((mySet) => {
+          const updatedSet = new Set(mySet);
+          updatedSet.add(header);
+          return updatedSet;
+        })
+        hostComponent.querySelector('.fave-button button').style = "color: var(--primary-color); background-color: white;";
+      }
+     });
     };
+
+    //dynamic image
+    hostComponent.style.background = `url('${imageurl}') center/cover no-repeat`;
 
     render();
 };

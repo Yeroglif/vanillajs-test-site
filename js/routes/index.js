@@ -26,6 +26,7 @@ export default (hostComponent) => {
     }
 
   </style>
+  <div data-component="cookies-popup"></div>
   <div class="flex flex-col gap-md">
   <div data-component="flexible-hero"
      data-image-url="https://www.cryptidophilia.com/wp-content/uploads/beast-of-busco-picture.jpg"
@@ -35,10 +36,10 @@ export default (hostComponent) => {
      data-view-height="50"
      >
   </div>
-  <div class="about flex gap-md align-center">
+  <div class="about flex flex-col align-center">
      <h1>Cryptid Discovery Hub</h1>
-     <div class="cryptid-about-contents">
-        <p>The central place for exploring and learning about mysterious creatures from around the world. Whether you're a curious enthusiast or a dedicated researcher, you'll find a wealth of knowledge to dive into.</p>
+     <div class="cryptid-about-contents flex flex-col align-center gap-md">
+        <p style="text-align: center">The central place for exploring and learning about mysterious creatures from around the world. Whether you're a curious enthusiast or a dedicated researcher, you'll find a wealth of knowledge to dive into.</p>
         <div>
            <a href="/explore" class="button wireframe squarify">See full list</a>
         </div>

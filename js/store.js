@@ -2,6 +2,7 @@ export const store = (() => {
   let state = {
     sharedCount: 0,
     currentUser: null,
+    cryptidFaveSet: new Set(),
   };
 
   // users can still mutate the store with get<X> methods, but events won't be fired - so best practice only use set<X> methods to mutate
@@ -26,6 +27,13 @@ export const store = (() => {
           detail: state.sharedCount,
         }),
       );
+    },
+
+    isCryptidFave: (cryptid) => state.cryptidFaveSet.has(cryptid),
+
+    setCryptidFave: (updateFunction) => {
+      const newState = updateFunction(state.cryptidFaveSet);
+      state.cryptidFaveSet = newState;
     },
   };
 })();
