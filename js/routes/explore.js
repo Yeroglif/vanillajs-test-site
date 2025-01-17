@@ -2,28 +2,11 @@ export default (hostComponent) => {
     // Define HTML structure with data attributes directly in the template
     const indexHTML = `
     <style>
-     div[data-component="narrow-hero"] {
-          .narrow-hero {
-          transition-duration: 180ms; 
-        }
-          .narrow-hero-overlay {
-          display: none;
-        }
-     }
      div[data-component="narrow-hero"]:hover {
-
-          .narrow-hero {
-               padding: 0;
-          padding-top: 0rem;
-          padding-left: 0rem;
-          padding-right: 0rem;
-        }
-          .narrow-hero-overlay {
-          display: flex;
+        .narrow-hero-overlay {
+          opacity: 1;
           background: rgb(255, 255, 255, 0.5);
-          padding-top: 0rem;
-          padding-left: 0rem;
-          padding-right: 0rem;
+          visibility: visible;
         }
         .narrow-hero h1 {
           color: rgb(0, 0, 0, 1)

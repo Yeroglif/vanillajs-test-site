@@ -9,7 +9,7 @@ export default (hostComponent) => {
         .narrow-hero {
           position: relative;
           width: 100%;
-          height: 250px; 
+          height: 250px;
         }
         
         .narrow-hero-overlay {
@@ -22,6 +22,9 @@ export default (hostComponent) => {
           align-items: center;
           justify-content: center;
           padding: 1rem;
+          opacity: 0;
+          visibility: hidden; /* Prevent interaction when hidden */
+          transition-duration: 500ms;
         }
         
         .narrow-hero-content {
@@ -35,12 +38,14 @@ export default (hostComponent) => {
           font-size: 2rem;
           margin: 0;
           color: #333;
+          gap: 0.7rem;
         }
         
         .narrow-hero p {
           font-size: 1.6rem;
           color: #555;
           font-weight: 500;
+          margin: 0;
         }
 
         @media (min-width: 600px){
@@ -59,7 +64,7 @@ export default (hostComponent) => {
               <span class="text">Favourite</span>
             </button>
           </div>
-          <div class="narrow-hero-content">
+          <div class="narrow-hero-content flex flex-col">
             <h1>${header}</h1>
             <p>${text}</p>
           </div>
