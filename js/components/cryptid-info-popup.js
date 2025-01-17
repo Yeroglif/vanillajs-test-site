@@ -1,18 +1,6 @@
-// /js/components/cookies-popup.js
+// /js/components/cryptid-info-popup.js
 
 export default (hostComponent) => {
-    // If user has already set preferences, don't show the modal again.
-    if (
-      localStorage.getItem('analytics-cookies') !== null &&
-      localStorage.getItem('personalization-cookies') !== null &&
-      localStorage.getItem('advertisement-cookies') !== null
-    ) {
-      return;
-    }
-  
-    const analyticsPreference = localStorage.getItem('analytics-cookies') === 'true';
-    const personalizationPreference = localStorage.getItem('personalization-cookies') === 'true';
-    const advertisementPreference = localStorage.getItem('advertisement-cookies') === 'true';
   
     // CSS for the modal (Instagram Style)
     const cookieModalStyles = `
@@ -29,10 +17,12 @@ export default (hostComponent) => {
           align-items: center;
           z-index: 1000;
           opacity: 0;
+          visibility: hidden;
           transition: opacity 0.3s ease-in-out;
       }
       #nikos-modal-background.show {
           opacity: 1;
+          visibility: visible;
       }
       #nikos-modal {
           padding: 1rem 2rem;
@@ -65,18 +55,15 @@ export default (hostComponent) => {
     const cookieModalHTML = `
   <div id="nikos-modal-background">
       <div id="nikos-modal" role="dialog" aria-labelledby="nikos-modal-label">
-          <p id="nikos-modal-label">We use cookies to enhance your experience. Choose the cookies you allow:</p>
-          <div class="preference">
+          <p id="nikos-modal-label">Cryptid details:</p>
+          <div class="afdfa">
               <span>Analytics</span>
-              <input type="checkbox" id="analytics-cookies" ${analyticsPreference ? 'checked' : ''}>
           </div>
           <div class="preference">
               <span>Personalization</span>
-              <input type="checkbox" id="personalization-cookies" ${personalizationPreference ? 'checked' : ''}>
           </div>
-          <div class="preference">
+          <div class="asfasf">
               <span>Advertisement</span>
-              <input type="checkbox" id="advertisement-cookies" ${advertisementPreference ? 'checked' : ''}>
           </div>
           <button id="save-preferences">Save Preferences</button>
       </div>
@@ -90,10 +77,16 @@ export default (hostComponent) => {
     const modalBackground = hostComponent.querySelector('#nikos-modal-background');
   
     // Fade in animation
-    setTimeout(() => {
-      modalBackground.classList.add('show');
-    }, 50);
-  
+    const showCryptidInfo = () => {
+        setTimeout(() => {
+          modalBackground.classList.add('show');
+        }, 50);
+    }
+
+    document.addEventListener("SHOW_CRYPTID_INFO", (event) => {
+        hostComponent.querySelector(".preference span").innerText = event.detail.header;
+        showCryptidInfo();
+    });
     // Close modal when clicking outside of it
     modalBackground.addEventListener('click', (event) => {
       if (event.target === modalBackground) {
@@ -108,26 +101,11 @@ export default (hostComponent) => {
       }
     });
   
-    // Handle saving preferences
-    hostComponent.querySelector('#save-preferences').addEventListener('click', () => {
-      localStorage.setItem('analytics-cookies', hostComponent.querySelector('#analytics-cookies').checked);
-      localStorage.setItem(
-        'personalization-cookies',
-        hostComponent.querySelector('#personalization-cookies').checked,
-      );
-      localStorage.setItem(
-        'advertisement-cookies',
-        hostComponent.querySelector('#advertisement-cookies').checked,
-      );
-  
-      fadeOutAndRemove();
-    });
-  
     // Fade out and remove the modal
     function fadeOutAndRemove() {
       modalBackground.classList.remove('show');
       setTimeout(() => {
-        modalBackground.remove();
+        // modalBackground.remove();
       }, 300);
     }
   };
