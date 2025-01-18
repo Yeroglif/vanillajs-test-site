@@ -23,23 +23,66 @@ export default (hostComponent) => {
       <div data-component="fullscreen-hero"
            data-image-url="https://images.unsplash.com/photo-1679584052596-3efcfd169f42?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
            data-overlay-color="rgba(0, 0, 0, 0.5)"
-           data-header="This is a fullscreen-hero"
-           data-text="Some text you want to right here"
-           data-button-text="Add your link url here"
-           data-button-link="/calendar"
+           data-header="Full list of the cryptids"
+           data-text="The non-definitive collection of all things cryptid"
+           data-button-text="Help us expand the list"
+           data-button-link="/submit"
            >
       </div>
   
       <div data-component="cryptid-narrow-hero"
            data-imageurl="https://cdn.pixabay.com/photo/2024/10/30/10/07/ai-generated-9161334_960_720.png" 
            data-header="Lochness monster"
-           data-text="Area of operations: Loch Ness">
+           data-text="Mythical aquatic Scottish creature"
+           data-location="Lochness loch, Scotland"
+           data-date="1933-12-09"
+           data-discoverer="Saint Columba">
       </div>
       <div data-component="cryptid-narrow-hero"
-      data-imageurl="https://images.unsplash.com/photo-1679584052596-3efcfd169f42?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-      data-header="Monkey"
-      data-text="AAAAAAAAAAAAAA">
-      </div>
+     data-imageurl="https://images.unsplash.com/photo-1665245080999-3a5f0113b6d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+     data-header="Bigfoot"
+     data-text="Large humanoid forest dweller"
+     data-location="Pacific Northwest, USA"
+     data-date="1958-08-27"
+     data-discoverer="Jerry Crew">
+</div>
+
+<div data-component="cryptid-narrow-hero"
+     data-imageurl="https://cdn.pixabay.com/photo/2024/04/12/18/54/chupacabra-8692435_1280.jpg" 
+     data-header="Chupacabra"
+     data-text="Goat-sucking mysterious predator"
+     data-location="Puerto Rico"
+     data-date="1995-03-11"
+     data-discoverer="Madelyne Tolentino">
+</div>
+
+<div data-component="cryptid-narrow-hero"
+     data-imageurl="https://cdn.pixabay.com/photo/2023/11/14/13/54/mot-8387785_960_720.png" 
+     data-header="Mothman"
+     data-text="Winged red-eyed harbinger"
+     data-location="Point Pleasant, West Virginia"
+     data-date="1966-11-12"
+     data-discoverer="Roger Scarberry">
+</div>
+
+<div data-component="cryptid-narrow-hero"
+     data-imageurl="https://cdn.pixabay.com/photo/2024/03/26/04/27/ai-generated-8655879_1280.jpg" 
+     data-header="Lizard Man"
+     data-text="Reptilian swamp-dwelling cryptid"
+     data-location="Scape Ore Swamp, South Carolina"
+     data-date="1988-07-14"
+     data-discoverer="Christopher Davis">
+</div>
+
+<div data-component="cryptid-narrow-hero"
+     data-imageurl="https://cdn.pixabay.com/photo/2024/08/06/09/48/ai-generated-8948929_1280.jpg" 
+     data-header="Yeti"
+     data-text="Snowy Himalayan ape-like being"
+     data-location="Himalayas, Nepal"
+     data-date="1832-10-15"
+     data-discoverer="B.H. Hodgson">
+</div>
+
     `;
   
     // Apply HTML to the hostComponent

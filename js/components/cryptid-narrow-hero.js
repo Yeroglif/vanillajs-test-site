@@ -2,7 +2,10 @@
 import { store} from '../store.js';
 
 export default (hostComponent) => {
-    const {imageurl='https://picsum.photos/1600/900', header = "Default Header", text = "" } = hostComponent.dataset;
+  // data-location="Lochness loch, Scotland"
+  //data-date="1933-12-09"
+  //data-discoverer="Saint Columba">
+    const {imageurl='https://picsum.photos/1600/900', header = "Default Header", text = "", location, date, discoverer } = hostComponent.dataset;
     const render = () => {
         hostComponent.innerHTML = `
       <style>
@@ -98,7 +101,9 @@ export default (hostComponent) => {
       }
      });
      hostComponent.querySelector(".crypted-narrow-hero-overlay").addEventListener("click", () => {
-      document.dispatchEvent(new CustomEvent("SHOW_CRYPTID_INFO", {detail: {header: header}}));
+      document.dispatchEvent(new CustomEvent("SHOW_CRYPTID_INFO", {
+        detail: {header: header, location: location, date: date, discoverer: discoverer}
+      }));
     });
     };
 
