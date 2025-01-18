@@ -10,6 +10,7 @@ export default (hostComponent) => {
           z-index: 100;
           top: 85%;
           left: 50%;
+          transform: translate(-50%, -50%); /* move element by half its width and height for better positioning */
           transition-duration: 300ms;
      }
      .down-button a {
