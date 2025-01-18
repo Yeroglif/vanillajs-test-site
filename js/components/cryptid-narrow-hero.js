@@ -1,4 +1,4 @@
-// Updated narrow-hero component to maintain padding and a fixed height
+// Updated crypted-narrow-hero component to maintain padding and a fixed height
 import { store} from '../store.js';
 
 export default (hostComponent) => {
@@ -6,13 +6,13 @@ export default (hostComponent) => {
     const render = () => {
         hostComponent.innerHTML = `
       <style>
-        .narrow-hero {
+        .crypted-narrow-hero {
           position: relative;
           width: 100%;
           height: 250px;
         }
         
-        .narrow-hero-overlay {
+        .crypted-narrow-hero-overlay {
           position: absolute;
           inset: 0;
           /*
@@ -27,7 +27,7 @@ export default (hostComponent) => {
           transition-duration: 500ms;
         }
         
-        .narrow-hero-content {
+        .crypted-narrow-hero-content {
           text-align: center;
           max-width: 600px;
           margin: auto;
@@ -35,14 +35,14 @@ export default (hostComponent) => {
           background: 
         }
         
-        .narrow-hero h1 {
+        .crypted-narrow-hero h1 {
           font-size: 2rem;
           margin: 0;
           color: #333;
           gap: 0.7rem;
         }
         
-        .narrow-hero p {
+        .crypted-narrow-hero p {
           font-size: 1.6rem;
           color: #555;
           font-weight: 500;
@@ -56,15 +56,15 @@ export default (hostComponent) => {
         }
         }
       </style>
-      <section class="narrow-hero">
-        <div class="narrow-hero-overlay">
+      <section class="crypted-narrow-hero">
+        <div class="crypted-narrow-hero-overlay">
           <div class="fave-button">
             <button class="transparent squarify">
               <span class="icon">&#10084;</span>
               <span class="text">Favourite</span>
             </button>
           </div>
-          <div class="narrow-hero-content flex flex-col">
+          <div class="crypted-narrow-hero-content flex flex-col">
             <h1>${header}</h1>
             <p>${text}</p>
           </div>
@@ -97,7 +97,7 @@ export default (hostComponent) => {
         hostComponent.querySelector('.fave-button button').style = "color: var(--primary-color); background-color: white;";
       }
      });
-     hostComponent.querySelector(".narrow-hero-overlay").addEventListener("click", () => {
+     hostComponent.querySelector(".crypted-narrow-hero-overlay").addEventListener("click", () => {
       document.dispatchEvent(new CustomEvent("SHOW_CRYPTID_INFO", {detail: {header: header}}));
     });
     };

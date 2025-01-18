@@ -3,15 +3,15 @@ export default (hostComponent) => {
     const indexHTML = `
     <style>
      div[data-component="cryptid-narrow-hero"]:hover {
-        .narrow-hero-overlay {
+        .crypted-narrow-hero-overlay {
           opacity: 1;
           background: rgb(255, 255, 255, 0.5);
           visibility: visible;
         }
-        .narrow-hero h1 {
+        .crypted-narrow-hero h1 {
           color: rgb(0, 0, 0, 1)
         }
-        .narrow-hero p {
+        .crypted-narrow-hero p {
           color: rgb(0, 0, 0, 1)
         }
         .fave-button button{
