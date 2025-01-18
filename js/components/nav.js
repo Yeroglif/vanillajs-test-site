@@ -134,44 +134,16 @@ export default (hostComponent) => {
         <span class="text">Home</span>
       </a>
       <a href="/explore" title="Explore Wildlife">
-        <span class="icon">&#129409;</span>
+        <span class="icon">🐲</span>
         <span class="text">Explore Wildlife</span>
       </a>
       <a href="/submit" title="Submit a Sighting">
-        <span class="icon">&#x270F;</span>
+        <span class="icon">🖊️</span>
         <span class="text">Submit a Sighting</span>
       </a>
       <a href="/cryptid-map" title="Map">
-        <span class="icon">&#128506;</span>
+        <span class="icon">🗺️</span>
         <span class="text">Map</span>
-      </a>
-      <a href="/button-badge" title="Button + Badges Design System">
-        <span class="icon">&#x1F518;</span>
-        <span class="text">Button + Badges</span>
-      </a>
-      <a href="/form" title="Form Design System">
-        <span class="icon">&#x270F;</span>
-        <span class="text">Form</span>
-      </a>
-      <a href="/heros" title="Heros">
-        <span class="icon">&#x1F9B8;</span>
-        <span class="text">Heros</span>
-      </a>
-      <a href="/maps" title="Map example">
-        <span class="icon">&#x1F5FA;</span>
-        <span class="text">Maps</span>
-      </a>
-      <a href="/calendar" title="Calendar Example">
-        <span class="icon">📆</span>
-        <span class="text">Calendar</span>
-      </a>
-      <a href="/multiple-instances" title="Multiple instances">
-        <span class="icon">🧬</span>
-        <span class="text">Multiple instances</span>
-      </a>
-      <a href="/cookies" title="Elementary cookie popup permissions">
-        <span class="icon">🍪</span>
-        <span class="text">Cookie popup</span>
       </a>
     `;
 
