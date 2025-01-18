@@ -8,11 +8,12 @@ export default async (hostComponent) => {
 
   // Define markers
   let locationMarkers = [
-    { lat: 34.0522, lng: -118.2437, name: 'Cafe 1', description: 'This is Cafe 1 in California' },
-    { lat: 37.7749, lng: -122.4194, name: 'Cafe 2', description: 'This is Cafe 2 in California' },
-    { lat: 51.5072, lng: -0.1276, name: 'Cafe 3', description: 'This is Cafe 3 in London' },
-    { lat: 56.4907, lng: -4.2026, name: 'Cafe 4', description: 'This is Cafe 4 in Scotland' },
-    { lat: 48.2082, lng: 16.3738, name: 'Cafe 5', description: 'This is Cafe 5 in Austria' },
+    { lat: 57.3229, lng: -4.4244, name: 'Lochness Monster', description: 'Mythical aquatic Scottish creature in Lochness Loch, Scotland' },
+    { lat: 47.6062, lng: -122.3321, name: 'Bigfoot', description: 'Large humanoid forest dweller in Pacific Northwest, USA' },
+    { lat: 18.2208, lng: -66.5901, name: 'Chupacabra', description: 'Goat-sucking mysterious predator in Puerto Rico' },
+    { lat: 38.9072, lng: -82.1369, name: 'Mothman', description: 'Winged red-eyed harbinger in Point Pleasant, West Virginia' },
+    { lat: 34.1706, lng: -80.4585, name: 'Lizard Man', description: 'Reptilian swamp-dwelling cryptid in Scape Ore Swamp, South Carolina' },
+    { lat: 27.9878, lng: 86.9250, name: 'Yeti', description: 'Snowy Himalayan ape-like being in the Himalayas, Nepal' },
   ];
 
   // Set up the HTML for the map container
