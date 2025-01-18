@@ -43,7 +43,9 @@ export default async (hostComponent, baseUrl = config.BASE_URL) => {
   const loadRoute = async (url) => {
     try {
       const routePath =
-          url === '/' || url === '' ? `${baseUrl}/routes/index.js` : `${baseUrl}/routes${url}.js`;
+          url === '/' || url === '' ?
+           `${baseUrl}/routes/index.js` : url ==='list' ?
+            `${baseUrl}/routes/explore.js` : `${baseUrl}/routes${url}.js`;
 
       const route = await import(/* @vite-ignore */ routePath);
       route.default(hostComponent);
