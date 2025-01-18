@@ -93,14 +93,14 @@ export default (hostComponent) => {
   
     // Apply HTML to the hostComponent
     hostComponent.innerHTML = indexHTML;
+    //Check if user is scrolling
     window.addEventListener('scroll', () => {
-     if (window.scrollY === 0) {
-       // User is at the top of the page
-       hostComponent.querySelector(".down-button").style = 'opacity: 1; visibility: visible';
-     } else {
-       // User is not at the top
-       hostComponent.querySelector(".down-button").style = 'opacity: 0; visibility: hidden';
-     }
+      const downButton = hostComponent.querySelector(".down-button");
+      if(!downButton){
+        return;
+      }
+      window.scrollY === 0 ? downButton.style = 'opacity: 1; visibility: visible;'
+                           : downButton.style = 'opacity: 0; visibility: hidden;' ;
    });
   };
   
