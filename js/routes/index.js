@@ -98,7 +98,7 @@ export default (hostComponent) => {
       data-overlay-color="rgba(0, 0, 0, 0.5)"
       data-header="Look into the unknown"
       data-text="Some of the most mysterious and mythical creatures are waiting to be discovered"
-      data-view-height="50"
+      data-px-height="50"
       >
    </div>
    <div class="about flex flex-col align-center">
@@ -127,7 +127,7 @@ export default (hostComponent) => {
          </div>
          <div class="card-info flex flex-row justify-between gap-md">
             <div class="cryptid-tag-container">
-               <h3>Look into the map of all findings</h3>
+               <h3>Look into the cryptid map</h3>
                <p class="badge primary">Scotland</p>
                <p class="badge primary">Tibet</p>
                <p class="badge primary">Napels</p>

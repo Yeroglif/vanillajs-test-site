@@ -45,7 +45,7 @@ export default (hostComponent) => {
            data-button-link="/submit"
            >
       </div>
-      <div class="down-button"><a href="#list" class="icon button wireframe transparent">&#129051;</a></div>
+      <div class="down-button"><a href="#list" class="icon button wireframe transparent">&#9660;</a></div>
       <section id="list">
       <div data-component="cryptid-narrow-hero"
            data-imageurl="https://cdn.pixabay.com/photo/2024/10/30/10/07/ai-generated-9161334_960_720.png" 

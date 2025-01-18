@@ -54,7 +54,7 @@ export default (hostComponent) => {
     const buttonText = hostComponent.getAttribute('data-button-text') || '';
     const buttonLink = hostComponent.getAttribute('data-button-link') || '#';
     const parallax = hostComponent.getAttribute('data-parallax') !== 'false'; // Defaults to true
-    const viewHeight = hostComponent.getAttribute('data-view-height') || 100;
+    const pxHeight = hostComponent.getAttribute('data-px-height') || 100;
     const pxWidth = hostComponent.getAttribute('data-px-width') || 100;
   
     // Inject HTML with styles for the hero banner
@@ -63,7 +63,7 @@ export default (hostComponent) => {
         .hero-container {
           position: relative;
           width: ${pxWidth}%;
-          height: ${viewHeight}vh;
+          height: ${pxHeight}%;
           background-image: url('${imageUrl}');
           background-size: cover;
           background-position: top;
