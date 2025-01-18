@@ -54,8 +54,8 @@ export default (hostComponent) => {
     const buttonText = hostComponent.getAttribute('data-button-text') || '';
     const buttonLink = hostComponent.getAttribute('data-button-link') || '#';
     const parallax = hostComponent.getAttribute('data-parallax') !== 'false'; // Defaults to true
-    const pxHeight = hostComponent.getAttribute('data-px-height') || 100;
-    const pxWidth = hostComponent.getAttribute('data-px-width') || 100;
+    const pxHeight = hostComponent.getAttribute('data-px-height') || 100; // for height regulation
+    const pxWidth = hostComponent.getAttribute('data-px-width') || 100; // for width regulation
   
     // Inject HTML with styles for the hero banner
     hostComponent.innerHTML = `

@@ -7,7 +7,6 @@ export default (hostComponent) => {
        .submit-page {
           display: flex;
           gap: 1rem;
-          
          }
          .flex-hero {
             flex-grow: 1;
@@ -28,6 +27,7 @@ export default (hostComponent) => {
       data-view-height="40"
       data-header="Notify us of new discoveries"
       data-text="Share your cryptid discovery with the team and maybe the whole world!"></div>
+   <!-- Form title and form -->
    <div style="flex-grow: 1">
       <h1 class="flex justify-center">Submit your finding</h1>
       <form class="centered" style="padding: 1rem;">

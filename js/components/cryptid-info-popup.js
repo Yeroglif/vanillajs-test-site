@@ -59,29 +59,29 @@ export default (hostComponent) => {
   
     // HTML for the modal
     const cookieModalHTML = `
-    <div id="nikos-modal-background">
-    <div id="nikos-modal">
-       <p id="nikos-modal-label">Cryptid details:</p>
-       <table class="info-table">
-          <tr id="cryptid-name">
-             <th>Name:</th>
-             <td></td>
-          </tr>
-          <tr id="cryptid-date">
-             <th>Date of Discovery:</th>
-             <td></td>
-          </tr>
-          <tr id="cryptid-location">
-             <th>Location:</th>
-             <td></td>
-          </tr>
-          <tr id="cryptid-discoverer">
-             <th>Discoverer:</th>
-             <td></td>
-          </tr>
-       </table>
-    </div>
- </div>
+<div id="nikos-modal-background">
+   <div id="nikos-modal">
+      <p id="nikos-modal-label">Cryptid details:</p>
+      <table class="info-table">
+         <tr id="cryptid-name">
+            <th>Name:</th>
+            <td></td>
+         </tr>
+         <tr id="cryptid-date">
+            <th>Date of Discovery:</th>
+            <td></td>
+         </tr>
+         <tr id="cryptid-location">
+            <th>Location:</th>
+            <td></td>
+         </tr>
+         <tr id="cryptid-discoverer">
+            <th>Discoverer:</th>
+            <td></td>
+         </tr>
+      </table>
+   </div>
+</div>
   `;
   
     // Append styles and HTML to the host component
@@ -96,7 +96,7 @@ export default (hostComponent) => {
           modalBackground.classList.add('show');
         }, 50);
     }
-    //event to display the popup
+    //Listen to event to display the popup
     document.addEventListener("SHOW_CRYPTID_INFO", (event) => {
       hostComponent.querySelector("#cryptid-name td").innerText = event.detail.header;
       hostComponent.querySelector("#cryptid-date td").innerText = event.detail.date;

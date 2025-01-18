@@ -83,7 +83,7 @@ export default (hostComponent) => {
     }
     //Listen to clicks on fave button
     hostComponent.querySelector(".fave-button button").addEventListener("click", (event) => {
-      event.stopPropagation();
+      event.stopPropagation(); // make sure clicking on the hero doesn't trigger the fave button
       if(store.isCryptidFave(header)){
         store.setCryptidFave((mySet) => {
           const updatedSet = new Set(mySet);
@@ -100,6 +100,7 @@ export default (hostComponent) => {
         hostComponent.querySelector('.fave-button button').style = "color: var(--primary-color); background-color: white;";
       }
      });
+     //Listen to clicks on the narrow-hero
      hostComponent.querySelector(".crypted-narrow-hero-overlay").addEventListener("click", () => {
       document.dispatchEvent(new CustomEvent("SHOW_CRYPTID_INFO", {
         detail: {header: header, location: location, date: date, discoverer: discoverer}
