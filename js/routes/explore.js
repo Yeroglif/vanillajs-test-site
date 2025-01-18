@@ -2,6 +2,19 @@ export default (hostComponent) => {
     // Define HTML structure with data attributes directly in the template
     const indexHTML = `
     <style>
+     html {
+          scroll-behavior: smooth;
+     }
+     .down-button {
+          position: fixed;
+          z-index: 100;
+          top: 85%;
+          left: 50%;
+          transition-duration: 300ms;
+     }
+     .down-button a {
+          font-size: 3rem;
+     }
      div[data-component="cryptid-narrow-hero"]:hover {
         .crypted-narrow-hero-overlay {
           opacity: 1;
@@ -18,6 +31,9 @@ export default (hostComponent) => {
           color: black;
         }
      }
+     @media (min-width: 600px) {
+
+     }
     </style>
     <div class="cryptid-info" data-component="cryptid-info-popup"></div>
       <div data-component="fullscreen-hero"
@@ -29,7 +45,8 @@ export default (hostComponent) => {
            data-button-link="/submit"
            >
       </div>
-  
+      <div class="down-button"><a href="#list" class="icon button wireframe transparent">&#129051;</a></div>
+      <section id="list">
       <div data-component="cryptid-narrow-hero"
            data-imageurl="https://cdn.pixabay.com/photo/2024/10/30/10/07/ai-generated-9161334_960_720.png" 
            data-header="Lochness monster"
@@ -82,10 +99,19 @@ export default (hostComponent) => {
      data-date="1832-10-15"
      data-discoverer="B.H. Hodgson">
 </div>
-
+</section>
     `;
   
     // Apply HTML to the hostComponent
     hostComponent.innerHTML = indexHTML;
+    window.addEventListener('scroll', () => {
+     if (window.scrollY === 0) {
+       // User is at the top of the page
+       hostComponent.querySelector(".down-button").style = 'opacity: 1; visibility: visible';
+     } else {
+       // User is not at the top
+       hostComponent.querySelector(".down-button").style = 'opacity: 0; visibility: hidden';
+     }
+   });
   };
   
