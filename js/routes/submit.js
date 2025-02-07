@@ -7,6 +7,8 @@ export default (hostComponent) => {
        .submit-page {
           display: flex;
           gap: 1rem;
+          height: 100%;
+          min-height: 100vh;
          }
          .flex-hero {
             flex-grow: 1;
