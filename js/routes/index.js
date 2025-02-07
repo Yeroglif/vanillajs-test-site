@@ -108,7 +108,7 @@ export default (hostComponent) => {
    <div class="cryptid-card-container flex flex-col gap-md">
       <div class="cryptid-card flex flex-col gap-md">
          <div class="cryptid-img-container">
-            <img src="https://cdn.pixabay.com/photo/2024/10/30/10/07/ai-generated-9161334_960_720.png" />
+            <img alt='loch ness monster' src="https://cdn.pixabay.com/photo/2024/10/30/10/07/ai-generated-9161334_960_720.png" />
          </div>
          <div class="card-info flex flex-row justify-between gap-md">
             <div class="cryptid-tag-container">
@@ -123,7 +123,7 @@ export default (hostComponent) => {
       </div>
       <div class="cryptid-card flex flex-col gap-md">
          <div class="cryptid-img-container">
-            <img src="https://blogs.loc.gov/maps/files/2016/08/Bertelli_Monster.png" />
+            <img alt='bertelli monster' src="https://blogs.loc.gov/maps/files/2016/08/Bertelli_Monster.png" />
          </div>
          <div class="card-info flex flex-row justify-between gap-md">
             <div class="cryptid-tag-container">
@@ -138,7 +138,7 @@ export default (hostComponent) => {
       </div>
       <div class="cryptid-card flex flex-col gap-md">
          <div class="cryptid-img-container">
-            <img src="https://cdn.pixabay.com/photo/2017/10/12/19/37/book-2845632_1280.jpg" />
+            <img alt='books to write in' src="https://cdn.pixabay.com/photo/2017/10/12/19/37/book-2845632_1280.jpg" />
          </div>
          <div class="card-info flex flex-row justify-between gap-md">
                <h3>Submit your own discovery</h3>
